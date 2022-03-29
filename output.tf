@@ -1,5 +1,5 @@
 output "user_name" {
-  value       = module.rds.name
+  value       = module.rds.username
 }
 
 output "user_password" {
