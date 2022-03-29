@@ -1,7 +1,3 @@
-# terraform 3tier app
-
-### Usage:
-```
 module "wordpress" {
   source = "AleksaSka/wordpress/aws"
   ################### VPC ###########################
@@ -47,4 +43,3 @@ module "wordpress" {
   ZONEID = "Z0797111NE21F45UKDAP"
   DOMAIN = "fiefdomain.com"
 }
-```
