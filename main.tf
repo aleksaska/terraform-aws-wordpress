@@ -16,7 +16,7 @@ module "rds" {
   ################## RDS cluster #################
   engine_version = var.engine_version
   number_of_instanses = var.number_of_instanses
-  master_username = var.aster_username
+  master_username = var.master_username
   ################## Route53 #################
   ZONEID = var.rds_zoneid
   DOMAIN = var.rds_domain
