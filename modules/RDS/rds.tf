@@ -11,7 +11,6 @@ resource "aws_rds_cluster" "rds_claster" {
   vpc_security_group_ids              = [aws_security_group.db_security.id]
   backup_retention_period             = 5
   storage_encrypted                   = true
-  availability_zones                  = var.availability_zones
 }
 
 resource "aws_rds_cluster_instance" "wordpress_instanse" {
