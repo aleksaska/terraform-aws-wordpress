@@ -32,7 +32,6 @@ module "wordpress" {
   rds_domain = "fiefdomain.com"
 
 ################### RDS ###########################
-  source  = "./modules/ASG_LB"
   ################## Region of landing ASG #################
   asg_region = "us-east-1"
   ################## Autoscaling group #################
