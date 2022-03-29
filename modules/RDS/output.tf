@@ -4,7 +4,6 @@ output "username" {
 
 output "userpassword" {
     value = aws_rds_cluster.rds_claster.master_password
-    sensitive = true
 }
 
 output "dbname" {
