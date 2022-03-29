@@ -5,7 +5,7 @@ resource "aws_rds_cluster" "rds_claster" {
   enable_http_endpoint                = true
   database_name                       = "mySQLdatabase"
   master_username                     = var.master_username
-  master_password                     = "changeme"
+  master_password                     = var.master_password
   skip_final_snapshot                 = true
   db_subnet_group_name                = aws_db_subnet_group.db_subnet.name
   vpc_security_group_ids              = [aws_security_group.db_security.id]

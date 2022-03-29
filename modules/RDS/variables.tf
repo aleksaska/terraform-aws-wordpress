@@ -22,6 +22,12 @@ variable "master_username" {
   default     = null
 }
 
+variable "master_password" {
+  description = "rds mastr user password"
+  type        = string
+  default     = null
+}
+
 variable "ZONEID" {
   description = "id of your domain host"
   type        = string

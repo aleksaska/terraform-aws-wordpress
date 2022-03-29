@@ -31,9 +31,10 @@ module "wordpress" {
   engine_version = "5.7.mysql_aurora.2.03.2"
   number_of_instanses = 1
   master_username = "tanos"
+  master_password = "changeme"
   ################## Route53 #################
-  rds_zoneid = "Z0797111NE21F45UKDAP"
-  rds_domain = "fiefdomain.com"
+  rds_zoneid = "yourdomainid"
+  rds_domain = "yourdomain"
 
 ################### ASG ###########################
   ################## Region of landing ASG #################
@@ -43,7 +44,7 @@ module "wordpress" {
   desire_size = 4
   max_size = 99
   ################## Route53 #################
-  asg_zoneid = "Z0797111NE21F45UKDAP"
-  asg_domain = "fiefdomain.com"
+  asg_zoneid = "yourdomainid"
+  asg_domain = "yourdomain"
 }
 ```

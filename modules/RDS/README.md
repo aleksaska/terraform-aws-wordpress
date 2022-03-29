@@ -10,14 +10,10 @@ module "rds" {
   engine_version = "5.7.mysql_aurora.2.03.2"
   number_of_instanses = 4
   master_username = "tanos"
-  availability_zones = [
-       "us-east-1a",
-       "us-east-1b",
-       "us-east-1c",
-  ]
+  master_password = "changeme"
   ################## Route53 #################
-  ZONEID = "Z0797111NE21F45UKDAP"
-  DOMAIN = "fiefdomain.com"
+  ZONEID = "yourdomainid"
+  DOMAIN = "yourdomain"
   ################## from other modules #################
   vpc_id = module.vpc.vpc_id                     # for db security group
   subnet_ids = module.vpc.private_subnet_ids     # for db subnet group

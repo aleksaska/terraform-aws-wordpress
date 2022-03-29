@@ -13,8 +13,8 @@ module "asg" {
   max_size = 99
   health_check_type = "EC2"
   ################## Route53 #################
-  ZONEID = "Z0797111NE21F45UKDAP"
-  DOMAIN = "fiefdomain.com"
+  ZONEID = "yourdomainid"
+  DOMAIN = "yourdomain"
   ################## from other modules #################
   vpc_id = module.vpc.vpc_id
   subnet_ids = module.vpc.public_subnet_ids
