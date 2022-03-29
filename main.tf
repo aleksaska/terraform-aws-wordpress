@@ -1,7 +1,7 @@
 module "vpc" {
   source  = "./modules/VPC"
   ################## Region of landing VPC #################
-  aws_regions = var.vpc_regions
+  aws_region = var.vpc_region
   ################## VPC parameters #################
   vpc_cidr_blk = var.vpc_cidr_blk
   public_subnets_cidrs = var.public_subnets_cidrs
@@ -12,7 +12,7 @@ module "vpc" {
 module "rds" {
   source  = "./modules/RDS"
   ################## Region of landing ASG #################
-  aws_regions = var.rds_regions
+  aws_region = var.rds_region
   ################## RDS cluster #################
   engine_version = var.engine_version
   number_of_instanses = var.number_of_instanses
@@ -28,7 +28,7 @@ module "rds" {
 module "asg" {
   source  = "./modules/ASG_LB"
   ################## Region of landing ASG #################
-  aws_regions = var.asg_region
+  aws_region = var.asg_region
   ################## Autoscaling group #################
   min_size = var.min_size
   desire_size = var.desire_size

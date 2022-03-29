@@ -1,5 +1,5 @@
 ########################### VPC ###################################
-variable "vpc_regions" {
+variable "vpc_region" {
   description = "AWS region"
   type        = string
   default = null
@@ -29,7 +29,7 @@ variable "availability_zones" {
   default     = null
 }
 ########################### RDS ###################################
-variable "rds_regions" {
+variable "rds_region" {
   description = "AWS region"
   type        = string
   default = null
