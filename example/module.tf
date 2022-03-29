@@ -2,7 +2,7 @@ module "wordpress" {
   source = "AleksaSka/wordpress/aws"
   ################### VPC ###########################
   ################## Region of landing VPC #################
-  vpc_regions = "us-east-1"
+  vpc_region = "us-east-1"
   ################## VPC parameters #################
   vpc_cidr_blk = "10.0.0.0/16"
   public_subnets_cidrs = [
@@ -22,7 +22,7 @@ module "wordpress" {
   ]
 ################### RDS ###########################
   ################## Region of landing RDS #################
-  rds_regions = "us-east-1"
+  rds_region = "us-east-1"
   ################## RDS cluster #################
   engine_version = "5.7.mysql_aurora.2.03.2"
   number_of_instanses = 1
