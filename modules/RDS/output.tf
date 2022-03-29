@@ -18,3 +18,11 @@ output "cluster_endpoint" {
 output "depends_on" {
   value = aws_rds_cluster_instance.wordpress_instanse[*].id
 }
+
+output "writer_53" {
+  value = aws_route53_record.writer.name
+}
+
+output "readers_53" {
+  value = aws_route53_record.readers.*.name
+}
