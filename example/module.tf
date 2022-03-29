@@ -31,7 +31,7 @@ module "wordpress" {
   rds_zoneid = "Z0797111NE21F45UKDAP"
   rds_domain = "fiefdomain.com"
 
-################### RDS ###########################
+################### ASG ###########################
   ################## Region of landing ASG #################
   asg_region = "us-east-1"
   ################## Autoscaling group #################
@@ -39,6 +39,6 @@ module "wordpress" {
   desire_size = 4
   max_size = 99
   ################## Route53 #################
-  ZONEID = "Z0797111NE21F45UKDAP"
-  DOMAIN = "fiefdomain.com"
+  asg_zoneid = "Z0797111NE21F45UKDAP"
+  asg_domain = "fiefdomain.com"
 }
