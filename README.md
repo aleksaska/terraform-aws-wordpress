@@ -48,3 +48,38 @@ module "wordpress" {
   asg_domain = "yourdomain"
 }
 ```
+
+
+### IN CASE IF U NEED OUTPUTS RIGHT AWAY U CAN USE FOLLOWING IN OUTPUT.TF FOLDER:
+
+```
+output "name" {
+    value = module.wordpress.user_name
+}
+output  "password" {
+    value = module.wordpress.user_password
+}
+
+output "wordpress_domain_link" {
+    value = module.wordpress.link_to_wordpress_domain
+}
+
+output "rds_writer_link" {
+    value = module.wordpress.link_to_rds_writer_instanse
+}
+
+output "rds_readers_links" {
+    value = module.wordpress.links_to_rds_reader_instanses
+}
+```
+
+### IN CASE IF U WANT TO KEEP YOUR STATE FILE IN S3 BACKET USE FOLLOWING WITH YOUR OWN S3 BACKET NAME AND KEY:
+
+```
+terraform {
+  backend "s3" {
+    bucket = "yourbacket"
+    key    = "project/"
+    region = "us-east-1"
+  }
+  ```
